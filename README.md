@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails prototype applications that renders an emergency summary template in a narrative form, parsing and interpolating different placeholders from persisted data.
 
-Things you may want to cover:
+To test the app clone the repository, run 'bundle install', 'rake db:migrate', 'rake db:seed' and start the server 'rails server'.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Go to 'localhost:3000/patients' to see a list of all the patients. Click on a patient from the list to view the corresponding emergency summary.
