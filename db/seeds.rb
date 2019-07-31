@@ -28,7 +28,7 @@ OrderFrequency.create!([
   {value: "q6hr", frequency_unit: "hour"}
 ])
 Patient.create!([
-  {first_name: "Thomas", last_name: "Schudel", middle_name: nil, mr: "30997", dob: "1976-01-01 00:00:00", gender: nil, admission_id: 1, facility_id: 1}
+  {first_name: "Thomas", last_name: "Schudel", middle_name: nil, mr: "30997", dob: "1976-01-01 00:00:00", gender: 'male', admission_id: 1, facility_id: 1}
 ])
 Symptom.create!([
   {description: "severe pain", admission_id: 1},
