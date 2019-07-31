@@ -1,3 +1,3 @@
 class Symptom < ApplicationRecord
-  belongs_to :admission
+  belongs_to :admission, optional: true
 end
