@@ -1,0 +1,9 @@
+This <%= @patient.age %> years old {{@patient.gender}} was admitted to <%= @patient.facility.name %> on <%= @patient.admission.date %> at <%= @patient.admission.time %> due to <%= to_attributes_array(@patient.admission.diagnoses, 'description').to_sentence %>. The observed symptoms on admission were <%= to_attributes_array(@patient.admission.symptoms, 'description').to_sentence %>. <%= to_attributes_array(@patient.admission.observations, 'description').to_sentence %>.
+
+<br></br>
+
+Upon asking about known allergies, the patient disclosed <%= to_attributes_array(@patient.allergies, 'description').to_sentence %>. Upon asking about chronic conditions, the patient disclosed <%= to_described_code(@patient.chronic_conditions).to_sentence %>. The patient was administered with <%= @patient.format_medications.to_sentence %>.
+
+<br></br>
+
+The staff performed <%= @patient.format_diagnostic_procedures.to_sentence %>, revealing <%= to_described_code(@patient.diagnoses).to_sentence %>. Our team proceeded to <%= @patient.format_treatments.to_sentence %>.
