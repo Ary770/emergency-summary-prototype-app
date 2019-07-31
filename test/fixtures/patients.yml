@@ -5,13 +5,13 @@ one:
   last_name: MyString
   middle_name: MyString
   mr: MyString
-  dob: 
-  gender_id: 1
+  dob:
+  gender: 
 
 two:
   first_name: MyString
   last_name: MyString
   middle_name: MyString
   mr: MyString
-  dob: 
-  gender_id: 1
+  dob:
+  gender:

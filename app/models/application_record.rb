@@ -12,5 +12,5 @@ class ApplicationRecord < ActiveRecord::Base
       self.moment.strftime("%I:%M%p")
     end
   end
-  
+
 end

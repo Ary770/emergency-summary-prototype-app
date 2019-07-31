@@ -1,35 +1,41 @@
-<h1> <%= @patient.format_name %> </h1>
+<div class="">
+  <%= link_to 'Back', patients_path()%>
 
-  <div class="panel panel-default">
-    <!-- Panel Title -->
+  <%= render partial: 'print' %>
 
-    <div class="panel-heading"><b>Emergency Transfer Summary</b></div>
+</div>
 
-    <!-- Table -->
-    <table class="table">
-      <tr>
-        <th colspan="4">Transferring Facility</th>
-      </tr>
-      <tr>
-        <td colspan="4">Name <br> <p class="text-primary"><%= @patient.facility.name %></p></td>
-      </tr>
 
-      <tr>
-        <th colspan="4">Patient Information</th>
-      </tr>
-      <tr>
-        <%= render partial: 'patient_info', object: @patient %>
-      </tr>
+<div class="panel panel-default">
+  <!-- Panel Title -->
 
-      <tr>
-        <th colspan="4">Summary</th>
-      </tr>
-      <tr>
-        <td colspan="4" class="text-primary">
-          <%= render partial: 'summary', object: @patient  %>
-        </td>
-      </tr>
+  <div class="panel-heading"><b>Emergency Transfer Summary (Form 34L-D)</b></div>
 
-    </table>
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th colspan="4">Transferring Facility</th>
+    </tr>
+    <tr>
+      <td colspan="4">Name <br> <p class="text-primary"><%= @patient.facility.name %></p></td>
+    </tr>
 
-  </div>
+    <tr>
+      <th colspan="4">Patient Information</th>
+    </tr>
+    <tr>
+      <%= render partial: 'patient_info', object: @patient %>
+    </tr>
+
+    <tr>
+      <th colspan="4">Summary</th>
+    </tr>
+    <tr>
+      <td colspan="4" class="text-primary">
+        <%= render partial: 'summary', object: @patient  %>
+      </td>
+    </tr>
+
+  </table>
+
+</div>

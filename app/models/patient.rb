@@ -1,5 +1,4 @@
 class Patient < ApplicationRecord
-  belongs_to :gender, optional: true
   belongs_to :admission, optional: true
   belongs_to :facility, optional: true
 
