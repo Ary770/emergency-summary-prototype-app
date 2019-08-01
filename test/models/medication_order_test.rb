@@ -34,9 +34,4 @@ class MedicationOrderTest < ActiveSupport::TestCase
     assert_not @medication.save, "Saved the medication without a medication_route"
   end
 
-  test "should not save medication without a order_frequency_id" do
-    @medication.order_frequency_id = nil
-    assert_not @medication.save, "Saved the medication without a order_frequency_id"
-  end
-
 end

@@ -1,5 +1,5 @@
 class MedicationOrder < ApplicationRecord
-  belongs_to :order_frequency
+  belongs_to :order_frequency, optional: true
   belongs_to :patient, optional: true
 
   enum mass_unit: [:mg]

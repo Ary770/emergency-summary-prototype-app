@@ -8,12 +8,6 @@ class DiagnosticProcedureTest < ActiveSupport::TestCase
     @procedure = DiagnosticProcedure.new
   end
 
-  test "should not save procedure without a patient_id" do
-    @procedure.moment = DateTime.now
-    @procedure.description = 'some procedure description'
-    assert_not @procedure.save, "Saved the procedure without a patient_id"
-  end
-
   test "should not save procedure without description" do
     @procedure.patient_id = 1
     @procedure.moment = DateTime.now
