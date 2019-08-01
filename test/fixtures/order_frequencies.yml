@@ -2,6 +2,8 @@
 
 one:
   value: MyString
+  frequency_unit: MyString
 
 two:
   value: MyString
+  frequency_unit: MyString

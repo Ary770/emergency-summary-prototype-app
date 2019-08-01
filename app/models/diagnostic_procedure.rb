@@ -1,3 +1,5 @@
 class DiagnosticProcedure < ApplicationRecord
-  belongs_to :patient, optional: true
+  belongs_to :patient
+
+  validates :description, :moment, presence: true
 end

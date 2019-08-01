@@ -3,7 +3,9 @@
 one:
   description: MyText
   moment: 
+  admission_id: 1
 
 two:
   description: MyText
-  moment: 
+  moment:
+  admission_id: 1

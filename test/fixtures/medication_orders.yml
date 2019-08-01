@@ -2,12 +2,16 @@
 
 one:
   name: MyString
-  unit: 
+  mass_unit: MyString
   dosage: 9.99
   necessity: MyText
+  medication_route: MyText
+  order_frequency_id: 1
+  patient_id: 1
 
 two:
   name: MyString
-  unit: 
+  mass_unit: MyString
   dosage: 9.99
   necessity: MyText
+  medication_route: MyText

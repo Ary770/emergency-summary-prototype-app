@@ -2,13 +2,10 @@
   <%= link_to 'Back', patients_path()%>
 
   <%= render partial: 'print' %>
-
 </div>
-
 
 <div class="panel panel-default">
   <!-- Panel Title -->
-
   <div class="panel-heading"><b>Emergency Transfer Summary (Form 34L-D)</b></div>
 
   <!-- Table -->
@@ -17,7 +14,10 @@
       <th colspan="4">Transferring Facility</th>
     </tr>
     <tr>
-      <td colspan="4">Name <br> <p class="text-primary"><%= @patient.facility.name %></p></td>
+      <td colspan="4">
+        Name <br>
+        <p class="text-primary"><%= @patient.facility.name if @patient.facility %></p>
+      </td>
     </tr>
 
     <tr>
@@ -35,7 +35,6 @@
         <%= render partial: 'summary', object: @patient  %>
       </td>
     </tr>
-
   </table>
 
 </div>

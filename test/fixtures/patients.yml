@@ -5,8 +5,9 @@ one:
   last_name: MyString
   middle_name: MyString
   mr: MyString
-  dob:
-  gender: 
+  dob: MyString
+  gender: MyString
+  admission_id: 1
 
 two:
   first_name: MyString
@@ -14,4 +15,4 @@ two:
   middle_name: MyString
   mr: MyString
   dob:
-  gender:
+  gender: MyString

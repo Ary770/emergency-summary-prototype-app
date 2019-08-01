@@ -1,5 +1,5 @@
 class Patient < ApplicationRecord
-  belongs_to :admission, optional: true
+  belongs_to :admission
   belongs_to :facility, optional: true
 
   has_many :allergies
@@ -16,23 +16,27 @@ class Patient < ApplicationRecord
   end
 
   def age
+    return if !self.dob?
     now = Time.now.utc.to_date
     now.year - self.dob.year - ((now.month > self.dob.month || (now.month == self.dob.month && now.day >= self.dob.day)) ? 0 : 1)
   end
 
   def format_medications
+    return if !(self.medications.exists?)
     self.medications.map do |med|
       "#{med.name} #{med.dosage.to_i}#{med.mass_unit} #{med.route} #{med.frequency} to #{med.necessity}"
     end
   end
 
   def format_diagnostic_procedures
+    return if !(self.diagnostic_procedures.exists?)
     self.diagnostic_procedures.map do |procedure|
       "#{procedure.description} on #{procedure.date} at #{procedure.time}"
     end
   end
 
   def format_treatments
+    return if !(self.treatments.exists?)
     self.treatments.map { |treatment| "#{treatment.description} to #{treatment.necessity}" }
   end
 
